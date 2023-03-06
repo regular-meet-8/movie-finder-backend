@@ -1,3 +1,4 @@
 class Movie < ActiveRecord::Base
-    belongs_to :users
+    has_many :collections
+    has_many :users, through: :collections
 end
